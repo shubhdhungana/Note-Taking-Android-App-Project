@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    cardview:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/product_img_id"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#2d2d2d"
+            android:scaleType="centerCrop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/product_title_id"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:gravity="left"
+                android:text="Title"
+                android:textColor="#2d2d2d"
+                android:textSize="20sp"
+                cardview:layout_constraintStart_toStartOf="parent"
+                cardview:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/product_quantity_id"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:gravity="left"
+                android:text="Quantity"
+                android:textColor="#2d2d2d"
+                android:textSize="12sp"
+                cardview:layout_constraintStart_toStartOf="parent"
+                cardview:layout_constraintTop_toBottomOf="@+id/product_des_id" />
+
+            <TextView
+                android:id="@+id/product_des_id"
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:gravity="left"
+                android:inputType="textMultiLine"
+                android:text="Description"
+                android:textColor="#2d2d2d"
+                android:textSize="13sp"
+                cardview:layout_constraintStart_toStartOf="parent"
+                cardview:layout_constraintTop_toBottomOf="@+id/product_title_id" />
+
+            <TextView
+                android:id="@+id/product_price_id"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:gravity="left|bottom"
+                android:text="30000"
+                android:textColor="#2d2d2d"
+                android:textSize="15sp"
+                cardview:layout_constraintBottom_toBottomOf="parent"
+                cardview:layout_constraintStart_toStartOf="parent" />
+
+            <CheckBox
+                android:id="@+id/productpurchased"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:buttonTint="@color/black"
+                android:scaleX="1.70"
+                android:scaleY="1.70"
+                cardview:layout_constraintEnd_toEndOf="parent"
+                cardview:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/productlistedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_edit"
+                android:backgroundTint="#39F342"
+                cardview:layout_constraintBottom_toBottomOf="parent"
+                cardview:layout_constraintEnd_toStartOf="@+id/productlistdelete" />
+
+            <ImageView
+
+                android:id="@+id/productlistdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_delete"
+                android:backgroundTint="@color/colorRed"
+                cardview:layout_constraintBottom_toBottomOf="parent"
+                cardview:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
